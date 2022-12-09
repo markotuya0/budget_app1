@@ -5,6 +5,10 @@ class CategoriesController < ApplicationController
   
       def show
         @category = Category.find(params[:id])
+        if @category.author != current_user
+            flash[:alert] = "You can only see what you created"
+            redirect_to categories_path
+          end
         @expenses = @category.expenses.order(created_at: :desc)
         @total = @expenses.sum(:amount)
       end
