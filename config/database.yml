@@ -23,7 +23,7 @@ default: &default
 
 development:
   <<: *default
-  database: budget_app
+  database: budget_app_development
   username: postgres
   port: 5432
   password: admin
@@ -90,6 +90,7 @@ test:
 #
 production:
   <<: *default
+  adapter: postgresql
   database: budget_app_production
   username: budget_app
   password: <%= ENV["RAILS_RECIPE_APP_DATABASE_PASSWORD"] %>
