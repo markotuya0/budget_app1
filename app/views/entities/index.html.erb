@@ -1,0 +1,29 @@
+<div class="container d-flex flex-column ">
+ <div class="container d-flex mb-5">
+<%= link_to root_path do %>
+   <i class="fa-solid fa-circle-left" style="color:#5fb523"></i>
+<% end %>
+</div>
+
+<div class= "container d-flex flex-column">
+<div class="card alert alert-warning mb-3" style="max-height: 18rem;">
+    <div class="card-body d-flex justify-content-between">
+      <h5 class="card-title">Total</h5>
+      <p class="card-text"><%= total_amout_entity(@group_id)%></p>
+    </div>
+  </div>
+    <% @entities.each do |entity| %> 
+    <div class="card bg-light mb-3" style="max-height: 18rem;">
+        <div class="card-body d-flex justify-content-between">
+            <h5 class="card-title"><%= entity.name %></h5>
+            <p class="card-text"><%= entity.amount %></p>
+        </div>
+        </div>
+    <% end %>
+    </div>
+    <div class="container field mt-3 d-flex flex-column">
+    <%= link_to new_group_entity_path do %>
+    <button class="btn form-control btn-success green_button ">Add Transation</button>
+   <% end %>
+    </div>
+</div>

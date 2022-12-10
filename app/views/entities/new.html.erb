@@ -1,0 +1,26 @@
+<div class= "container d-flex flex-column" >
+<div class="container d-flex mb-5">
+<%= link_to group_entities_path do %>
+   <i class="fa-solid fa-circle-left" style="color:#5fb523"></i>
+<% end %>
+</div>
+  <h2>Transation</h2>
+  <%= form_for(@entity, :url => group_entities_path, :html => { :method => :post }) do |f| %>
+
+   <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name, class: "form-control" %>
+  </div>
+
+   <div class="field">
+      <%= f.label :amount, class:"form-label" %>
+      <%= f.number_field :amount, class:"form-control" %>
+    </div>
+  
+  
+    <div class="field mt-3 d-flex flex-column">
+      <%= f.submit "Add New", class: "btn form-control btn-success green_button " %>
+    </div>
+    
+  <% end %>
+</div>

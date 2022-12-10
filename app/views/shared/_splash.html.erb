@@ -1,0 +1,6 @@
+<div class="d-flex alert alert-primary justify-content-between" role="alert">
+    <h1>TRANSACTIONS</h1>
+     <% if signed_in? %>
+            <%= link_to "Sign out", destroy_user_session_path, data: { turbo: true, turbo_method: "delete" }, class: "btn btn-danger " %>
+     <% end %>
+</div>

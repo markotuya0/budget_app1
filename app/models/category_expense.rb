@@ -1,2 +1,0 @@
-class CategoryExpense < ApplicationRecord
-end
