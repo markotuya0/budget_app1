@@ -52,7 +52,7 @@ To get a local copy up and running, follow these steps.
 In order to run this project you need:
 
 ### Clone this repository
-git clone https://github.com/looh16/Budget_app
+git clone https://github.com/markoutya0/Budget_app
 
 ### Run project
 - cd Budget_app
