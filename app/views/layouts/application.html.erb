@@ -10,7 +10,16 @@
     <%= javascript_importmap_tags %>
   </head>
 
+  <!-- Google font -->
+<link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+
+
   <body>
+     <% if current_user%>
+      <%= render "shared/splash" %>
+     <% end %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <%= yield %>
   </body>
 </html>

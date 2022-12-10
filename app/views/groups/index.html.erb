@@ -1,0 +1,19 @@
+<div class="container d-flex flex-column ">
+<div>
+  <% @groups.each do |group| %> 
+  <div class="card bg-light mb-3" style="max-height: 18rem;">
+    <div class="card-body d-flex justify-content-between">
+      <h5 class="card-title"><%= group.icon %></h5>
+      <p class="card-text"><%= link_to group.name, group_entities_path(group)%></p>
+      <p class="card-text"><%= total_amout(group)%></p>
+    </div>
+  </div>
+  <% end %>
+   <div>
+    <%= link_to new_group_path(current_user) do %>
+    <button class="btn form-control btn-success green_button " >Add category</button>
+   <% end %>
+    </div>
+  </div>
+</div>
+

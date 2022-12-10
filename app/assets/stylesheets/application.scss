@@ -13,3 +13,40 @@
  *= require_tree .
  *= require_self
  */
+@import 'bootstrap';
+@import "font-awesome";
+
+*,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+.not_login {
+  margin-top: 15rem;
+}
+
+.categories {
+  height: 3rem;
+  justify-items: center;
+}
+
+.main_message {
+  margin-top: 1rem;
+}
+
+.blue_button {
+  background-color: #3778c2;
+  color: white;
+}
+
+.green_button {
+  background-color: #5fb523;
+  color: white;
+}
